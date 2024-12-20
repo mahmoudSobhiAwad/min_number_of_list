@@ -2,7 +2,7 @@ import 'dart:io';
 
 void getMinValue() {
   String? input;
-  List<double> numbers = [];
+  List<int> numbers = [];
   
   // welcome message
   print("Hello there! Let's find the minimum value in a list of numbers.\n"
@@ -17,7 +17,7 @@ void getMinValue() {
     if (input != null && input.trim().isNotEmpty) {
       // Try to parse the input as a double
       // return null incase failed parsing
-      double? number = double.tryParse(input);
+      int? number = int.tryParse(input);
 
       // If number is valid then we add to list
       if (number != null) {
@@ -37,7 +37,7 @@ void getMinValue() {
   // If list is not empty, find the minimum value
   if (numbers.isNotEmpty) {
     // Finding the minimum value
-    double minValue = numbers.reduce((a, b) => a < b ? a : b);
+    int minValue = numbers.reduce((a, b) => a < b ? a : b);
     print("The minimum value in the list is: $minValue");
   } else {
     print("No valid data entered.");

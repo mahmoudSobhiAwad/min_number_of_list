@@ -16,6 +16,7 @@ void getMinValue() {
     // Check if input is valid or no space within it
     if (input != null && input.trim().isNotEmpty) {
       // Try to parse the input as a double
+      
       // return null incase failed parsing
       int? number = int.tryParse(input);
 
